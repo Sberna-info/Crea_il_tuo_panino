@@ -31,7 +31,7 @@ namespace WpfPanino
         {
             double totale = 0;
             if (rbtPnormale.IsChecked == true)
-                totale += 1;
+                totale += 1.00;
             else if (rbtPintegrale.IsChecked == true)
                 totale += 1.25;
             else
@@ -42,18 +42,18 @@ namespace WpfPanino
             else if (rbtMortadella.IsChecked == true)
                 totale += 0.75;
             else if (rbtSalsiccia.IsChecked == true)
-                totale += 1;
+                totale += 1.00;
             else
                 totale += 1.25;
 
             if (cbxCipolla.IsChecked == true)
                 totale += 0.50;
-            else if (cbxPeperoni.IsChecked == true)
+            if (cbxPeperoni.IsChecked == true)
                 totale += 1.25;
-            else if (cbxInsalata.IsChecked == true)
+            if (cbxInsalata.IsChecked == true)
                 totale += 0.75;
-            else if(cbxFormaggio.IsChecked == true)
-                totale += 1;
+            if(cbxFormaggio.IsChecked == true)
+                totale += 1.00;
 
             lblTotale.Content = totale + "€";
         }
